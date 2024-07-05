@@ -26,6 +26,11 @@ a{
   }
   100%{
     opacity: 1;
+  }  
+}
+
+@media (max-width:1050px) {
+  .app{
+    /* width: 90%; */
   }
-  
 }
