@@ -4,9 +4,12 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import CartPage from './pages/cart/CartPage';
 import PlaceOrderPage from './pages/placeorder/PlaceOrderPage';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
+    
+    <>
     <div className='app'>
       <Navbar />
       <Routes>
@@ -15,6 +18,8 @@ const App = () => {
         <Route  path='/order' element={<PlaceOrderPage />} />
       </Routes>
     </div>
+    <Footer />
+    </>
   );
 }
 
