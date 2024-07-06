@@ -60,6 +60,10 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+
+import toggle_light from './theme/night.png'
+import toggle_dark from './theme/day.png'
+
 export const assets = {
     logo,
     basket_icon,
@@ -79,7 +83,9 @@ export const assets = {
     profile_icon,
     logout_icon,
     bag_icon,
-    parcel_icon
+    parcel_icon,
+    toggle_light,
+    toggle_dark
 }
 
 export const menu_list = [

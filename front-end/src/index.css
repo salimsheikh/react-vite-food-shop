@@ -11,6 +11,15 @@ body{
   min-height: 100vh;
 }
 
+.body-container{
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.body-container.dark{
+  background-color: #222;
+}
+
 a{
   text-decoration: none;
   color: inherit;
