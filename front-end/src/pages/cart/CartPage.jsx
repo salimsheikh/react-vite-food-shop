@@ -1,13 +1,19 @@
 import { useContext } from 'react';
 import './CartPage.css';
 import {StoreContext}  from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
 
-  const {cartItems, food_list, removeFromCart} = useContext(StoreContext)
+  const {cartItems, food_list, removeFromCart,getTotalCartAmount} = useContext(StoreContext)
+
+  const navigate = useNavigate();
+
+  const ship_amount = getTotalCartAmount() > 0 ? 2 : 0;
+
   return (
     <div className='cart-page'>
-      <div className="cart-items">
+      <div key="cart-items" className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>
           <p>Title</p>
@@ -56,21 +62,21 @@ const CartPage = () => {
             <div>
               <div className="cart-total-details">
                 <p>Subtotal</p>
-                <p>{0}</p>
+                <p>${getTotalCartAmount()}</p>
               </div>
               <hr />
               <div className="cart-total-details">
                 <p>Delivery Fee</p>
-                <p>{2}</p>
+                <p>${ship_amount}</p>
               </div>
               <hr />
               <div className="cart-total-details">
                 <b>Total</b>
-                <b>{3}</b>
+                <b>${getTotalCartAmount() + ship_amount }</b>
               </div>              
             </div>
             <div className='checkout-button'>
-              <button>PROCEE TO CHECKOUT</button>
+              <button onClick={() => {navigate("/order")}}>PROCEE TO CHECKOUT</button>
             </div>
         </div>
 
