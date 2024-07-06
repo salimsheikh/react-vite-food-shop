@@ -39,3 +39,28 @@
     }
 }
 
+@media (max-width:1050px) {
+    .header{
+        height: 39vw;
+    }
+    .header-contents{
+        max-width: 55%;
+        bottom: 12%;
+    }    
+}
+
+@media (max-width: 750px) {
+    
+    .header-contents{
+        max-width: 65%;
+
+        p{
+            display: none;
+        }
+
+        button{
+            padding: 2vw 4vw;
+        }
+    }
+    
+}

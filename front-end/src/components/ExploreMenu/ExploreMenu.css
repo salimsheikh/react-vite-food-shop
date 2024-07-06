@@ -51,8 +51,13 @@
         height: 2px;
         background-color: #e2e2e2;
         border: none;
+    }    
+
+    @media (max-width:1050px) {        
+        p.explore-menu-text{                        
+            max-width: 100%;
+            font-size: 14px;
+        }
     }
-    
-
-
 }
+
